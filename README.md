@@ -22,4 +22,4 @@ With:
 
 ## License
 [MIT License](https://github.com/meteoric/meteorhunt/blob/master/LICENSE)
-# ProjectB11
+
