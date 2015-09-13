@@ -1,0 +1,30 @@
+<template name="recent">
+
+  {{#contentFor "headerButtonLeft"}}
+    <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+      {{> ionIcon icon='ios-search'}}
+    </button>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-calm pull-right button-positive" data-ion-modal="newProduct">
+Share
+    </button>
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title"> <img class= "title-image" src="images/take3.png"> </h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      <div id="tinderslide">
+        <ul>
+          {{#each products}}
+            {{> _productItem product=this path="products.show"}}
+          {{/each}}
+        </ul>
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>
