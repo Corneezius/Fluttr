@@ -1,11 +1,17 @@
 Template.signIn.events({
-  'click [data-action=sign-in]': function (event, template) {
-    Meteor.loginWithMeteorDeveloperAccount({}, function (error) {
-      if (error) {
-        alert(error);
-      } else {
-        IonModal.close();
-      }
-    });
-  }
+  'submit form': function(event) {
+        event.preventDefault();
+        var emailVar = event.target.registerEmail.value;
+        var passwordVar = event.target.registerPassword.value;
+        Accounts.createUser({
+            email: emailVar,
+            password: passwordVar
+        }, function(err) {
+        	if (err) {
+        		console.log(err);
+    		}else{
+        		console.log("Registered!");
+        	}
+        });
+    }
 });

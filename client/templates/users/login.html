@@ -1,0 +1,18 @@
+<template name="login">
+	{{#ionView}}
+		{{#ionContent}}
+			<div class="card">
+			    <form class="user-forms">
+			    	<div class="item item-divider">E-mail</div>
+		        	<input type="email" name="loginEmail">
+		        	<div class="item item-divider">Password</div>
+			        <input type="password" name="loginPassword">
+			        <input class="button button-possitive sign-in-button" type="submit" value="Login">
+			    </form>
+		    </div>
+		    <div class="item tabs tabs-secondary tabs-icon-left">
+	    		<a class="tab-item register-link" href="#">Want to create an account?</a>
+	    	</div>
+    	{{/ionContent}}
+    {{/ionView}}
+</template>

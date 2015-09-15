@@ -1,18 +1,14 @@
 <template name="signIn">
-  {{#ionModal title=""}}
+  {{#ionModal title="Register"}}
 
     <div class="padding text-center sign-in-modal">
-      <p>
-        <img src="/favicon-160x160.png" width=80 height=80 />
-        <br>
-        <strong>Hey! Please sign in to do that :)</strong>
-      </p>
-
-      <p>
-        <button data-action="sign-in" class="button button-positive sign-in-button">
-          <img src="/images/meteor-icon.png" width=25 height=25 /> Sign in with Meteor
-        </button>
-      </p>
+        <form class="user-forms">
+          <div class="item item-divider">E-mail</div>
+          <input type="email" name="registerEmail">
+          <div class="item item-divider">Password</div>
+          <input type="password" name="registerPassword">
+          <input class="button button-positive" data-action="register" type="submit" value="Register">
+        </form>
     </div>
 
   {{/ionModal}}

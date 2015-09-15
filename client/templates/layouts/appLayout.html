@@ -1,21 +1,19 @@
 <template name="appLayout">
-
   {{#ionBody}}
-
-    {{> ionNavBar}}
-
-    {{#ionNavView}}
-      {{> yield}}
-    {{/ionNavView}}
-
- 
-     {{#ionTabs style="android" class="tabs-background-energized"}}
+  {{> ionNavBar}}
+  {{#ionTabs style="android" class="tabs-background-energized"}}
         {{> ionTab title="Trending" path="trending" icon="flash"}}
         {{> ionTab title="Discover" path="recent" icon="earth"}}
      
         {{> ionTab title="Profile" path="profile" icon="android-happy"}}
       {{/ionTabs}}
-    
+      {{#ionNavView}}
+        {{> yield}}
+      {{/ionNavView}}
+    {{#if currentUser}}
+    {{else}}
+        {{> login}}
+    {{/if}}
   {{/ionBody}}
 
 </template>

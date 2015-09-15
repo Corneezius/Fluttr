@@ -25,3 +25,4 @@ reactive-var
 accounts-ui
 accounts-facebook
 useraccounts:core
+accounts-password
