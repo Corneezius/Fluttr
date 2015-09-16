@@ -1,25 +1,12 @@
 <template name="_productItem">
-
-
-       <div class="product-detail">
   {{#with product}}
     <li data-itemid="{{_id}}">
-      {{#ionItem path=../path iconLeft=true iconRight=true class="item-text-wrap"}}
-                  {{> _voteButton}}
-            <h2 class="product-title">
-              <a href="{{url}}" target="_blank" class="positive">{{name}}</a>
-            </h2>
-            <p>
-              {{tagline}}
-            </p>
-            {{#with author}}
-              <p>
-                <small>via <a href="{{pathFor 'users.show'}}" class="dark">{{profile.name}}</a></small>
-              </p>
-            {{/with}}
-            <span class="date-posted">
-              {{datePosted}}
-            </span>
+      {{#ionItem path=../path iconLeft=true iconRight=true}}
+        {{> _voteButton}}
+        <h2>{{name}}</h2>
+        <p>
+          {{tagline}}
+        </p>
         <span class="comments-count">
           {{numberOfComments}}
           {{> ionIcon icon="ios-chatbubble" }}
@@ -28,7 +15,8 @@
       <div class="like"></div><div class="dislike"></div>
     </li>
   {{/with}}
-</div>
 </template>
+
+
   
 
