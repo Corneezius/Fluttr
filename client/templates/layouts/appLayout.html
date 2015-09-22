@@ -1,6 +1,6 @@
 <template name="appLayout">
+  {{#ionBody}}
     {{#if currentUser}}
-    {{#ionBody}}
   {{> ionNavBar}}
   {{#ionTabs style="android" class="tabs-background-energized"}}
         {{> ionTab title="Trending" path="trending" icon="flash"}}
@@ -11,9 +11,9 @@
       {{#ionNavView}}
         {{> yield}}
       {{/ionNavView}}
-      {{/ionBody}}
     {{else}}
         {{> login}}
     {{/if}}
+    {{/ionBody}}
 
 </template>

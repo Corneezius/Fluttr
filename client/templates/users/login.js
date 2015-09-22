@@ -1,3 +1,14 @@
+Template.login.rendered = function() {
+    var videobackground = new $.backgroundVideo($('#bgVideo'), {
+            "align" : "centerXY",
+            "path" : "/video/",
+            "width": 1215,
+            "height": 717,
+            "filename" : "Fluttr7",
+            "types" : ["mp4"]
+        });
+}
+
 Template.login.events({
     'submit form': function(event){
         event.preventDefault();
@@ -17,3 +28,4 @@ Template.login.events({
             return;
     }
 });
+
